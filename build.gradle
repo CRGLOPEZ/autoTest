@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //Selenium
+    implementation 'org.seleniumhq.selenium:selenium-java:4.30.0'
+
+    //WebDriverManager
+    implementation 'io.github.bonigarcia:webdrivermanager:6.0.0'
+
+    //TestNG
+    implementation 'org.testng:testng:7.11.0'
+
+}
+
+test {
+    useTestNG()
+}

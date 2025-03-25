@@ -10,8 +10,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 
@@ -34,17 +32,89 @@ public class autoTest {
         takeScreenshot("selenium_documentation.png");
 
         // Navegar por los elementos del menú lateral
-        List<WebElement> menus = driver.findElements(By.cssSelector("#m-documentation-li > ul"));
-        for(WebElement menu : menus){
-            menu.click();
-            try {
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"m-documentationoverview\"]"));
+        element.click();
+        try {
             Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            takeScreenshot(menu.getText() + " .png");
-
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
+        takeScreenshot("Overview.png");
+
+        WebElement element1 = driver.findElement(By.xpath("//*[@id='m-documentationwebdriver']"));
+        element1.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("WebDrive.png");
+
+        WebElement element2 = driver.findElement(By.xpath("//*[@id='m-documentationselenium_manager']"));
+        element2.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("Selenium Manager.png");
+
+        WebElement element3 = driver.findElement(By.xpath("//*[@id='m-documentationgrid']"));
+        element3.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("Grid.png");
+
+
+        WebElement element4 = driver.findElement(By.xpath("//*[@id='m-documentationie_driver_server']"));
+        element4.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("IE Driver Server.png");
+
+
+        WebElement element5 = driver.findElement(By.xpath("//*[@id='m-documentationide']"));
+        element5.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("IDE.png");
+
+        WebElement element6 = driver.findElement(By.xpath("//*[@id='m-documentationtest_practices']"));
+        element6.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("Practices.png");
+
+        WebElement element7 = driver.findElement(By.xpath("//*[@id='m-documentationlegacy']"));
+        element7.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("Legacy.png");
+
+        WebElement element8 = driver.findElement(By.xpath("//*[@id='m-documentationabout']"));
+        element8.click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        takeScreenshot("About.png");
     }
 
     private void takeScreenshot(String fileName) throws IOException {

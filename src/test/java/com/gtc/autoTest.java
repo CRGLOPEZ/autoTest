@@ -15,7 +15,6 @@ import org.openqa.selenium.OutputType;
 
 public class autoTest {
     private WebDriver driver;
-    private WebDriverWait wait;
 
     @BeforeClass
     public void setup() {

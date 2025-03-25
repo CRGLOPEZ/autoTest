@@ -31,7 +31,7 @@ public class autoTest {
         // Captura de pantalla de la documentación
         takeScreenshot("selenium_documentation.png");
 
-        // Navegar por los elementos del menú lateral
+        // Navegar por los elementos del menú lateral si busco funcionabilidad
         WebElement element = driver.findElement(By.xpath("//*[@id=\"m-documentationoverview\"]"));
         element.click();
         try {
